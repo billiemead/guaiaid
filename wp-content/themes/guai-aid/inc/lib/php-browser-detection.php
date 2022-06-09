@@ -1,0 +1,210 @@
+<?php
+/*
+	Name: Simple PHP Browser Detection script.
+	Version : 18.05
+	Author: Linesh Jose
+	Url: http://linesh.com
+	Donate:  http://linesh.com/make-a-donation/
+	github: https://github.com/lineshjose
+	Copyright: Copyright (c) 2013 LineshJose.com
+	
+	Note: This script is free; you can redistribute it and/or modify  it under the terms of the GNU General Public License as published by 
+		the Free Software Foundation; either version 2 of the License, or (at your option) any later version.This script is distributed in the hope 
+		that it will be useful,    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+		See the  GNU General Public License for more details.
+*/
+
+
+/* List of popular web browsers ---------- */
+function browsers() {
+   return array(
+        0 => 'Avant Browser', 'Arora', 'Flock', 'Konqueror', 'OmniWeb', 'Phoenix', 'Firebird', 'Mobile Explorer', 'Opera Mini', 'Netscape','Iceweasel', 'KMLite', 'Midori', 'SeaMonkey', 'Lynx', 'Fluid', 'chimera', 'NokiaBrowser', 'edg', 'Firefox', 'Chrome', 'MSIE', 'Internet Explorer', 'Opera', 'Safari', 'Mozilla', 'trident'
+    );
+}
+
+/* List of popular web robots ---------- */
+function robots() {
+    return array(
+        0 => 'GTmetrix', 'Chrome-Lighthouse','Googlebot', 'Googlebot-Image', 'MSNBot', 'Yahoo! Slurp', 'Yahoo', 'AskJeeves', 'FastCrawler', 'InfoSeek Robot', 'Lycos', 'YandexBot', 'YahooSeeker', 'Google Page Speed Insights', 'HeadlessChrome','MJ12bot',
+    );
+}
+
+/* List of popular os platforms ---------- */
+function platforms() {
+    return array(
+        0 => 'iPad', 'iPhone', 'iPod', 'iOS', 'macOS', 'tvOS', 'Mac OS X', 'Macintosh', 'Power PC Mac', 'Windows', 'Windows CE', 'Symbian', 'SymbianOS', 'Symbian S60', 'Ubuntu', 'Debian', 'NetBSD', 'GNU/Linux', 'OpenBSD', 'Android', 'Linux','Mobile', 'Tablet',
+
+    );
+}
+
+
+/*
+	This function to get the current browser info
+	@param $option : returns current browser property as an array. Eg: platform, name, version,
+	@param $agent: it is the $_SERVER['HTTP_USER_AGENT'] value
+*/
+
+//print_r(get_browser_info());
+function get_browser_info( $option = '', $agent = '' ) 
+{
+    $agent=@trim($agent);
+    $browser=array(
+        'agent'=>'',
+        'name'=>'',
+        'version'=>'',
+        'is_bot'=>'',
+        'platform'=>''
+    );
+
+    if ( empty( $agent ) && isset($_SERVER['HTTP_USER_AGENT']) ) {
+        $agent = strtolower( $_SERVER['HTTP_USER_AGENT']);
+    }
+
+
+    /* ----------------------------------------- browser name --------------------------------------------- */
+    $name = '';
+    foreach ( browsers() as $key ) 
+    {
+        if ( strpos( $agent, strtolower( trim( $key ) ) ) ) 
+        {
+            $name = trim( $key );
+            if($name=='edg'){
+                $name='Edge';
+            }
+            break;
+        } else {
+            continue;
+        }
+    }
+
+
+
+    /* ----------------------------------------- robot name --------------------------------------------- */
+    foreach ( robots() as $key ) 
+    {
+        if ( preg_match( "|" . preg_quote( strtolower( trim( $key ) ) ) . "|i", $agent ) ) {
+            $browser['is_bot']= TRUE;
+            $name = trim( $key );
+            break;
+        } else {
+            $browser['is_bot']= false;
+            continue;
+        }
+    }
+
+
+    /* ----------------------------------------- Platform --------------------------------------------- */
+
+    foreach ( platforms() as $key ) 
+    {
+        if ( preg_match( "|" . preg_quote( trim( $key ) ) . "|i", $agent ) ) {
+            $browser['platform']= trim( $key );
+            break;
+        } else {
+            continue;
+        }
+    }
+   
+
+
+    /* ----------------------------------------- Version --------------------------------------------- */
+
+    $known = array( 'version', strtolower( $name ), 'other' );
+    $pattern = '#(?<browser>' . join( '|', $known ) . ')[/]+(?<version>[0-9.|a-zA-Z.]*)#';
+    $version = 0;
+    if ( preg_match_all( $pattern, $agent, $matches ) ) 
+    {
+        if ( count( $matches['browser']) > 0 ) 
+        {
+            if ( strripos( $agent, "version" ) < strripos( $agent, strtolower( $name ) ) ) {
+                $version= $matches['version'][0];
+            } else {
+                $version = $matches['version'][1];
+            }
+        } else {
+            $version = 0;
+        }
+        if ( $version == null || $version == "" ) {
+            $version = "?";
+        }
+        $browser['version'] = round(( int ) $version);
+    }
+
+
+
+    /* ----------------------------------------- Browser Info --------------------------------------------- */
+    $browser['agent']= $agent;
+    if ( $name == 'trident' ) {
+        $browser['name']= 'Internet Explorer';
+        $browser['version']= '11';
+
+    } elseif ( empty( $name ) ) {
+        $browser['name']= 'Unknown';
+        $browser['version']= 0;
+
+    } else {
+        $browser['name']= $name;
+    }
+
+     if ( isset($option) && !empty($option)) {
+        return $browser[$option];
+    } else {
+        return $browser;
+    }
+}
+
+
+
+    /* This function to validate current browser. this function returns boolian value @param $name : browser name */
+    function is_browser( $name ) 
+    {
+        $name = strtolower( trim( $name ) );
+        $curr_brws = strtolower( get_browser_info( 'name' ) );
+        if ( $curr_brws == $name ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    /* This function to validate current browser version. this function returns boolian value @param $version: browser version */
+    function is_browser_version( $version ) 
+    {
+        $version = strtolower( trim( $version ) );
+        $curr_version = strtolower( get_browser_info( 'version' ) );
+        if ( $version == $curr_version ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    /* This function to validate current browser platform. this function returns boolian value @param $platform: browser platform (OS) */
+    function is_browser_platform( $platform ) 
+    {
+        $platform = strtolower( trim( $platform ) );
+        $curr_platform = strtolower( get_browser_info( 'platform' ) );
+        if ( $curr_platform == $platform ) {
+            return true;
+        } else if ( $platform == 'ios' && in_array( $curr_platform, array( 'iphone', 'ipod', 'ipad' ) ) ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    /* This function to validate current browser is a robot. this function returns boolian value */
+    function is_robot() 
+    {
+        if(is_browser( 'Unknown ')){
+            return true;
+        }else  if ( get_browser_info( 'is_bot' ) ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+?>

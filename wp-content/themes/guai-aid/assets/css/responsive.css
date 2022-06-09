@@ -1,0 +1,96 @@
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (max-width: 1400px) {}
+
+@media(max-width: 1600px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 800px) {}
+
+@media (max-width: 768px) {
+    .pagination {
+        display: block;
+    }
+
+    .pagination li {
+        float: left;
+    }
+
+    #home-content .text {
+        margin-bottom: 30px;
+    }
+
+    .page-section {
+        padding: 40px 0;
+    }
+
+    .email-sub-form .input-group-preppend {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .email-sub-form .form-control {
+        margin: 0px !important
+    }
+
+    .card-items .card .card-image {
+        background: #fff;
+    }
+
+    .card-items .card .card-image img {
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .wc-products-header,
+    .single-item-page .page-header,
+    #site-footer .footer-top {
+        padding: 40px 0;
+    }
+
+    .wc-products-header .wc-products-title,
+    .single-item-page .page-header .page-title {
+        width: 100% !important;
+        font-size: 35px;
+    }
+
+    .woo-sidebar {
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -ms-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+        position: fixed;
+        z-index: 11;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        background: #fff;
+        width: 250px;
+    }
+
+    .woo-sidebar.open {
+        left: 0px;
+    }
+    .home-title{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    #home-products .slick-arrows{
+        right: 15px;
+    }
+
+}
+
+@media (max-width: 600px) {}
+
+@media (max-width: 414px) {}

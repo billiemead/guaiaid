@@ -1,0 +1,180 @@
+/* WordPress Admin CSS */
+body {
+    font-size: 11px;
+}
+p, .wp-die-message {
+    font-size: 11px;
+}
+.wp-image-720 {
+    height: 35px;
+}
+
+#wpfooter p {
+    font-size: 11px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#wpfooter p a {
+    display: inline-flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+.updated.redux-banner-container {
+    display: none;
+}
+#akismet_setup_prompt {
+    display: none;
+}
+.notice.wcs-nux__notice {
+    display: none;
+}
+.ui-dialog .ui-dialog-content {
+    min-width: 100%;
+}
+.ui-dialog .ui-dialog-titlebar {
+    padding: 0 1em;
+}
+.ui-button, .ui-button:link, .ui-button:visited, .ui-button:hover, .ui-button:active {
+    text-transform: capitalize;
+}
+.ui-dialog .ui-dialog-title {
+    text-transform: capitalize;
+}
+.metabox-holder .stuffbox > h3, .metabox-holder .postbox > h3, .metabox-holder h3.hndle, .metabox-holder h2.hndle {
+    text-transform: lowercase;
+    letter-spacing: -0.5px;
+}
+#adminmenu a.menu-top, #adminmenu .wp-submenu-head {
+    font-size: 11px;
+}
+#adminmenu .wp-submenu a {
+    font-size: 11px;
+}
+.nav-tab {
+    font-size: 11px;
+}
+.subsubsub {
+    font-size: 11px;
+}
+.wrap > h2:first-child, .wrap [class$="icon32"] + h2, .postbox .inside h2, .wrap h1 {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#adminmenu .awaiting-mod, #adminmenu .update-plugins {
+    min-width: 15px;
+    height: 15px;
+    font-size: 9px;
+}
+#wp-admin-bar-user-info .avatar {
+    border-radius: 64px;
+}
+#wpadminbar #wp-admin-bar-my-account.with-avatar > .ab-empty-item img, #wpadminbar #wp-admin-bar-my-account.with-avatar > a img {
+    border-radius: 16px;
+    border: none;
+}
+.wpmf-item .wpmf-item-title {
+    font-size: 11px;
+}
+.wpmf-attachment .mdc-list-item__text {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 12px;
+}
+.wpmf-contextmenu li {
+    font-size: 12px;
+}
+#wpmf-breadcrumb {
+    font-size: 11px;
+}
+.media-frame.mode-grid.mode-edit .media-toolbar-secondary > .select-mode-toggle-button {
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+}
+.media-frame.mode-grid.mode-edit .media-toolbar-secondary > .select-mode-toggle-button {
+    background-color: #f8f8f8;
+}
+.attachments-browser .media-toolbar-secondary > .media-button {
+    margin-right: 10px;
+}
+.attachments-browser .media-toolbar-primary > .media-button, .attachments-browser .media-toolbar-primary > .media-button-group, .attachments-browser .media-toolbar-secondary > .media-button, .attachments-browser .media-toolbar-secondary > .media-button-group {
+    margin: 10px 0;
+}
+.media-toolbar-secondary > .media-button, .media-toolbar-secondary > .media-button-group {
+    margin-right: 10px;
+    margin-top: 15px;
+}
+.wp-core-ui .button, .wp-core-ui .button-secondary {
+    color: #2271b1;
+    border-color: #2271b1;
+    background: #f6f7f7;
+    vertical-align: top;
+}
+.wp-core-ui .button, .wp-core-ui .button-primary, .wp-core-ui .button-secondary {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.wp-filter {
+    font-size: 11px;
+}
+.wrap .add-new-h2, .wrap .add-new-h2:active, .wrap .page-title-action, .wrap .page-title-action:active {
+    font-size: 11px;
+}
+.wpmf_icon_remote_video {
+    font-size: 11px;
+}
+#wpadminbar * {
+    font-size: 11px;
+}
+.wpmf-new-folder, .wpmf-loadmore-folder {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.dashicons, .dashicons-before:before {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+#wpadminbar > #wp-toolbar > #wp-admin-bar-root-default .ab-icon, #wpadminbar .ab-icon, #wpadminbar .ab-item:before, .wp-admin-bar-arrow {
+    font: normal 16px/1 dashicons;
+}
+td.column-title strong, td.plugin-title strong {
+    font-size: 12px;
+}
+.plugins .row-actions {
+    font-size: 11px;
+}
+.widefat th, .widefat thead td, .widefat tfoot td {
+    font-size: 11px;
+}
+.widefat td, .widefat td p, .widefat td ol, .widefat td ul {
+    font-size: 11px;
+}
+.plugin-version-author-uri {
+    font-size: 11px;
+}
+kbd, code {
+    font-size: 11px;
+}
+#wpfooter p {
+    font-size: 11px;
+}
+.wp-core-ui select {
+    font-size: 11px;
+}
+#collapse-button .collapse-button-label {
+    top: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#update-nag, .update-nag {
+    font-size: 11px;
+}
+.search-box input[name="s"], .tablenav .search-plugins input[name="s"], .tagsdiv .newtag {
+    font-size: 11px;
+}

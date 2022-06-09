@@ -1,0 +1,69 @@
+article.single-item .itinerary-section .itineraries:before, #site-footer:before {
+    display: none;
+}
+.col-print-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.py-print-5 {
+    padding: 20px 0;
+}
+article.single-item .entry-header {
+    background: #eee;
+}
+article.single-item .entry-header .header-inner {
+    position: relative;
+    top: 0;
+    color: #0c0c0c;
+    left: 0;
+    transform: none;
+    max-width: 100%;
+    text-shadow: none;
+    padding: 50px 0;
+}
+article.single-item .entry-header .list-group, article.single-item .entry-header .list-group a {
+    color: #0c0c0c;
+}
+article.single-item .itinerary-section .itineraries {
+    padding-left: 0px;
+}
+article.single-item .itinerary-section .itineraries .itinerary-title {
+    margin: 0 0 15px;
+    font-size: 19px;
+    padding: 0px;
+    background: none;
+    display: block;
+    color: #000;
+    border-radius: 0;
+}
+article.single-item .tour-content .tab-content .tab-pane {
+    opacity: 1;
+}
+#site-header .navbar .navbar-brand {
+    width: 100%;
+    text-align: center;
+}
+#site-header .navbar .site-logo img {
+    max-height: none;
+}
+body, html, #site-footer .footer-top {
+    background-color: #fff !important;
+}
+#site-footer .footer-top a, #site-footer .footer-top .site-info span {
+    color: #505050;
+}
+article.single-item .tour-includes li.item .inner {
+    padding: 0;
+    margin: 0 0 5px;
+    border-radius: 0;
+    text-align: left;
+    margin-right: 0;
+    background-color: unset !important;
+}
+article.single-item .tour-includes li.item strong {
+    display: initial;
+}
+.table-borderless tbody + tbody, .table-borderless td, .table-borderless th, .table-borderless thead th {
+    border: 1px solid #eee;
+}

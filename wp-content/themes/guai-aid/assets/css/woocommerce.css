@@ -1,0 +1,21 @@
+.woocommerce-products-header {}
+
+.woocommerce-breadcrumb {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.woocommerce-breadcrumb a {
+    color: #333;
+}
+
+body.woocommerce-demo-store .woocommerce-store-notice {
+    padding: 10px;
+    background-color: #56157b;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+}

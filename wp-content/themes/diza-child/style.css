@@ -1,0 +1,276 @@
+/*
+Theme Name: Diza Child
+Theme URI: https://elementor.thembay.com/diza/
+Author: Thembay
+Description: This is a child theme for Diza
+Version: 1.0
+Author URI: https://thembay.com/
+Template: diza
+Text Domain: diza-child
+*/
+
+/*  [ Add your custom css below ]
+- - - - - - - - - - - - - - - - - - - - */
+/*Start fix lazyload image*/
+.tbay-element-posts-grid .post .entry-thumb .entry-image img {
+	max-height: 220px;
+}
+.mobile-logo a img {
+    max-height: 44px;
+}
+.header-logo img {
+	max-height: 80px;
+}
+.elementor-467 .elementor-element.elementor-element-383bec6b img {
+    max-width: 180px;
+}
+
+/*End fix lazyload image*/				
+.elementor-icon.elementor-social-icon {
+    font-size: var(--icon-size,25px);
+    line-height: var(--icon-size,25px);
+    width: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)));
+    height: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)));
+}
+.tbay-dropdown-cart .heading-title, .cart-dropdown .heading-title {
+    text-transform: capitalize;
+}
+.tbay-dropdown-cart .cart_empty>li span, .cart-dropdown .cart_empty>li span {
+    text-transform: capitalize;
+}
+
+.footer-device-mobile .list-menu-icon>* a span {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-size: 11px;
+}	
+.singular-shop>.product .single-main-content {
+    padding: 90px 0 30px;
+}
+.main-page {
+    margin-top: 74px;
+}
+
+#main-wrapper,
+.main-content {
+    margin-top: 100px;
+}
+.custom-image-list-categories .item-cat>a {
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+.elementor-403 .elementor-element.elementor-element-7d5aaf8a .custom-image-list-categories {
+    justify-content: center;
+}
+.item .item-icon {
+    margin-left: 3em;
+    margin-right: 3em;
+}
+.tbay-element[class*="tbay-element-product"] .owl-carousel, .tbay-element[class*="tbay-element-product"] .row {
+    margin: 0;
+    justify-content: center;
+}
+.post .entry-header .readmore {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: -0.75px;
+}				
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    font-weight: 600 !important;
+    letter-spacing: -0.5px !important;
+    font-size: 15px !important;
+}
+
+#tbay-header.header-on-slider {
+    position: absolute;
+    background: transparent;
+    width: 100%;
+}
+.form-control,
+form input:not([type="file"]),
+input#ywqa_ask_question_text {
+    padding: 10px;
+}
+#pwgc-message {
+    padding: 10px;
+}
+
+#tbay-header {
+    margin: 0;
+    padding: 0;
+    z-index: 1001;
+    background: rgba(25,90,180,0.85) !important;
+    position: absolute !important;
+    width: 100% !important;
+}
+.elementor-467 .elementor-element.elementor-element-3a4120c0 .tbay-login a i {
+    color: #fff !important;
+}
+.elementor-467 .elementor-element.elementor-element-125ac0a4 .top-wishlist i {
+    color: #fff !important;
+}
+.elementor-467 .elementor-element.elementor-element-6112ce19 .cart-dropdown .cart-icon {
+    color: #fff !important;
+}
+.cart-dropdown .subtotal {
+    color: #fff !important;
+}
+option {
+    font-size: 13px;
+}
+
+.elementor-widget-tbay-nav-menu .tbay-horizontal .navbar-nav>li>a {
+    color: #fff !important;
+    text-transform: capitalize;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+}
+
+.footer-device-mobile .list-menu-icon>.menu-icon a .menu-icon-child {
+    padding: 9px 0 5px;
+    position: relative;
+    display: inline-block
+}
+.mm-menu .mm-navbar_tabs a {
+    text-transform: uppercase;
+}
+
+.mm-menu .mm-panel_has-navbar .mm-navbar {
+    border-bottom: 1px dotted #c5c5c5 !important;
+}
+.diza-search-results .autocomplete-suggestions>div.view-all-products {
+    text-transform: capitalize;
+}
+.mm-listitem:after {
+    border-bottom-style: dotted !important;
+    border-color: #c5c5c5 !important;
+}
+.diza-search-results .autocomplete-suggestions {
+    margin-top: 2px !important;
+    border: 0px  !important;
+    border-radius: 0 0 5px 5px !important;
+    -webkit-border-radius: 0 0 5px 5px  !important;
+    -moz-border-radius: 0 0 5px 5px  !important;
+    -ms-border-radius: 0 0 5px 5px  !important;
+    -o-border-radius: 0 0 5px 5px  !important;
+}
+.diza-search-results .autocomplete-suggestions>div .suggestion-thumb img {
+    max-width: 60px;
+}
+.tbay-search-form .button-group:before {
+    color: #fff;
+}
+.elementor-467 .elementor-element.elementor-element-125ac0a4 > .elementor-widget-container {
+    padding: 0px 22px 0px 14px;
+}
+
+.elementor-382 .elementor-element.elementor-element-2867b6a2 .tbay-element-newsletter button[type="submit"] {
+    border-radius: 5px 5px 5px 5px;
+    margin: 4px 4px 4px 4px;
+    font-weight: normal;
+    text-transform: lowercase;
+    font-size: 14px;
+}
+@media (max-width: 767px) {
+    .elementor-382 .elementor-element.elementor-element-79b45641 > .elementor-widget-container {
+        padding: 15px 0px 0px 0px;
+        font-size: 13px;
+        text-align: center;
+    }
+}
+.tbay-to-top a {
+    color: #fff;
+    background: #13478e;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+@media (max-width: 1199px) {
+    .main-page {
+        margin-top: 0;
+    }
+    .footer-device-mobile .list-menu-icon>* a.active i, .footer-device-mobile .list-menu-icon>* a.active span, .footer-device-mobile .list-menu-icon>* a:focus i, .footer-device-mobile .list-menu-icon>* a:focus span {
+        color: #fff;
+    }
+}
+.footer-device-mobile .list-menu-icon>* a span {
+    color: #fff;
+}
+@media (max-width: 1199px) {
+    .footer-device-mobile .list-menu-icon>* i {
+        color: #fff;
+    }
+}
+@media (max-width: 1199px) {
+    .footer-device-mobile .list-menu-icon>* a {
+        margin-top: 10px;
+    }
+    .active-search-mobile .tbay-search-form.tbay-search-mobile .select-category {
+        width: 100px !important;
+    }
+    .topbar-device-mobile .search-device .tbay-search-form .button-group {
+        background: #2b74d7 !important;
+        width: 46px;
+        height: 46px;
+        border-radius: 0 3px 3px 0 !important;
+    }
+    .tbay-search-mobile .button-search:not(.icon) {
+        padding: 0px 16px!important;
+        line-height: 47px !important;
+    }
+}
+.tbay-to-top.active {
+    right: 23px;
+}
+@media (max-width: 1199px) {
+    .tbay-footer { 
+        padding-bottom: 55px !important;
+    }
+}
+@media (max-width: 1199px) {
+    .footer-device-mobile {
+        max-height: 55px;
+        height: 55px;
+        background: #13478e;
+    }
+}
+
+@media (max-width: 1199px) {
+    .footer-device-mobile .list-menu-icon>* i {
+        font-size: 20px !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .footer-device-mobile .list-menu-icon {
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .footer-device-mobile .list-menu-icon>* a span {
+        line-height: 1.7 !important;
+        text-transform: capitalize !important;
+        font-size: 13px !important;
+        font-weight: normal !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .footer-device-mobile .list-menu-icon>.menu-icon a {
+        padding: 0;
+    }
+}
+@media (max-width: 1199px) {
+    .footer-device-mobile .list-menu-icon>* a {
+        display: block;
+    }
+}
